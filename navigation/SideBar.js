@@ -38,7 +38,7 @@ export default class SideBar extends Component {
                     style={styles.logout}
                     onPress={() => this.onLogoutPress()}
                 >
-                    <Text style={styles.logoutText}>Log Out - touch</Text>
+                    <Text style={styles.logoutText}>Log Out</Text>
                     <Ionicons
                         name='ios-log-out'
                         size={28}

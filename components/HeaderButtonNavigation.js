@@ -4,11 +4,8 @@ import React, { Component } from 'react';
 
 import { View, TouchableOpacity } from 'react-native';
 
-
-
 export default class HeaderButtonNavigation extends Component {
     toggleDrawer = () => {
-        //Props to open/close the drawer
         this.props.navigationProps.toggleDrawer();
     };
     render() {
