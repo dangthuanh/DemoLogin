@@ -9,7 +9,6 @@ import ChatScreen from '../screens/ChatScreen';
 import HistoryScreen from '../screens/HistoryScreen';
 import HomeScreen from '../screens/HomeScreen';
 import LikeScreen from '../screens/LikeScreen';
-import LoginScreen from '../screens/LoginScreen';
 import ProfileScreen from '../screens/ProfileScreen';
 import SettingScreen from '../screens/SettingsScreen';
 import SupportScreen from '../screens/SupportScreen';
@@ -20,7 +19,7 @@ const Home = createStackNavigator({
     Home: {
         screen: HomeScreen,
         navigationOptions: ({ navigation }) => ({
-            title: 'Home',
+            title: null,
             headerLeft: <HeaderButton navigationProps={navigation} />,
             // headerTintColor: 'black',
             headerStyle: {
@@ -36,7 +35,7 @@ const Chat = createStackNavigator({
     Chat: {
         screen: ChatScreen,
         navigationOptions: ({ navigation }) => ({
-            title: 'Chat',
+            title: null,
             headerLeft: <HeaderButton navigationProps={navigation} />,
             // headerTintColor: '#8B1A1A',
             headerStyle: {
@@ -52,7 +51,7 @@ const Like = createStackNavigator({
     Like: {
         screen: LikeScreen,
         navigationOptions: ({ navigation }) => ({
-            title: 'Like',
+            title: null,
             headerLeft: <HeaderButton navigationProps={navigation} />,
             // headerTintColor: '#8B1A1A',
             headerStyle: {
@@ -68,7 +67,7 @@ const History = createStackNavigator({
     History: {
         screen: HistoryScreen,
         navigationOptions: ({ navigation }) => ({
-            title: 'History',
+            title: null,
             headerLeft: <HeaderButton navigationProps={navigation} />,
             // headerTintColor: '#8B1A1A',
             headerStyle: {
@@ -84,7 +83,7 @@ const Account = createStackNavigator({
     Account: {
         screen: ProfileScreen,
         navigationOptions: ({ navigation }) => ({
-            title: 'My Account',
+            title: null,
             headerLeft: <HeaderButton navigationProps={navigation} />,
             // headerTintColor: '#8B1A1A',
             headerStyle: {
@@ -101,7 +100,7 @@ const Setting = createStackNavigator({
     Setting: {
         screen: SettingScreen,
         navigationOptions: ({ navigation }) => ({
-            title: 'Setting',
+            title: null,
             headerLeft: <HeaderButton navigationProps={navigation} />,
             // headerTintColor: '#8B1A1A',
             headerStyle: {
@@ -117,7 +116,7 @@ const Support = createStackNavigator({
     Support: {
         screen: SupportScreen,
         navigationOptions: ({ navigation }) => ({
-            title: 'Support',
+            title: null,
             headerLeft: <HeaderButton navigationProps={navigation} />,
             // headerTintColor: '#8B1A1A',
             headerStyle: {
@@ -213,6 +212,7 @@ const tabNav = createBottomTabNavigator({
             },
             activeTintColor: 'rgba(255, 255, 255, 0.9)',
             inactiveTintColor: '#008B8B',
+            showLabel: false,
         }
     })
 
@@ -225,7 +225,7 @@ const stackNavigation = createStackNavigator({
     });
 
 
-    
+
 const drawerNavigation = createDrawerNavigator({
     Home: {
         screen: stackNavigation,
